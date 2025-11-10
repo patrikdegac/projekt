@@ -34,13 +34,15 @@
     <p>Fokus na korisno — bez buke, bez clickbaita.</p>
     <p>Rađeno u čistom HTML5 + CSS + JS, potpuno responzivno.</p>
   </div>
-  <div class="card">
-    <div style="position:relative;padding-top:56.25%">
-      <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:18px"
-        src="/projekt/video/highway.mp4" title="AutoPulse video" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <p class="muted">YouTube embed — zamjenjivo lokalnim videom.</p>
+ <figure class="media-card">
+  <div class="ratio-16x9">
+    <video controls preload="metadata" poster="/projekt/images/cover.jpg">
+      <source src="/projekt/video/highway.mp4" type="video/mp4">
+      Vaš preglednik ne podržava HTML5 video.
+    </video>
   </div>
+  <figcaption class="muted">Lokalni video – Highway (hostano na /projekt/video/).</figcaption>
+</figure>
 </section>
 
 </main>
