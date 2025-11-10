@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AutoPulse — crno/narančasti moderni auto portal.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Kontakt • AutoPulse</title>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <a class="logo" href="index.html"><img src="favicon.svg" alt="AutoPulse logo"><span>AutoPulse</span></a>
+    <button aria-label="Menu" class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul id="nav">
+        <li><a href="index.html" class="">Početna</a></li>
+        <li><a href="news.html" class="">Vijesti</a></li>
+        <li><a href="gallery.html" class="">Galerija</a></li>
+        <li><a href="about.html" class="">O nama</a></li>
+        <li><a href="contact.html" class="active">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="container">
+
+<section class="section">
+  <h1>Kontakt</h1>
+  <div class="grid cols-2">
+    <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.862330612756!2d14.442176!3d45.327063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764a128d5a3bcb1%3A0x7b9a5b6b7b82!2sRijeka!5e0!3m2!1shr!2shr!4v1700000000000">
+    </iframe>
+    <form class="card" onsubmit="return handleSubmit(event)">
+      <h2>Pišite nam</h2>
+      <label for="ime">Ime*</label><input id="ime" name="ime" class="input" required>
+      <label for="prezime">Prezime*</label><input id="prezime" name="prezime" class="input" required>
+      <label for="email">Email*</label><input id="email" name="email" type="email" class="input" required>
+      <label for="drzava">Država*</label>
+      <select id="drzava" name="drzava" required>
+        <option value="">Odaberite...</option>
+        <option>Hrvatska</option><option>Slovenija</option><option>BiH</option>
+        <option>Srbija</option><option>Njemačka</option>
+      </select>
+      <label><input type="checkbox" id="newsletter" name="newsletter"> Želim primati newsletter</label>
+      <label for="poruka">Poruka*</label><textarea id="poruka" name="poruka" class="input" required></textarea>
+      <button class="btn" type="submit">Pošalji</button>
+      <p id="status" class="muted"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container grid cols-2">
+    <div><strong>AutoPulse</strong><p class="muted">Vijesti, recenzije i vodiči za ljubitelje automobila.</p></div>
+    <div class="social">
+      <a href="https://instagram.com" target="_blank" rel="noopener">IG</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener">FB</a>
+      <a href="https://youtube.com" target="_blank" rel="noopener">YT</a>
+      <a href="https://x.com" target="_blank" rel="noopener">X</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

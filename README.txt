@@ -1,0 +1,1 @@
+Postavi email u php/send.php ($to) i uploadaj cijeli folder na server /projekt/.
