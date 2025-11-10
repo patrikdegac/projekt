@@ -1,0 +1,81 @@
+
+:root{
+  --bg:#0b0c0e; --panel:#111316; --panel2:#15181c;
+  --line:#232830; --text:#f2f5f8; --muted:#aab4bf;
+  --brand:#ff6a00; --brand2:#ff8a2b; --radius:20px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+  line-height:1.65}
+img,video{max-width:100%;height:auto;display:block;border-radius:16px}
+figure{margin:0}
+figcaption{color:#b5c1cc;margin-top:.5rem;font-size:.95rem}
+a{color:var(--brand2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1{font-size:clamp(32px,5vw,56px);line-height:1.1;margin:.1rem 0 .5rem}
+h2{font-size:clamp(22px,3vw,32px);margin:.2rem 0 .6rem}
+h3{font-size:clamp(18px,2.4vw,22px);margin:.3rem 0 .4rem}
+p{margin:.3rem 0 1rem}
+.container{width:min(1180px,92%);margin:0 auto}
+.section{padding:48px 0}
+.grid{display:grid;gap:22px}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid var(--line);
+  background:rgba(20,22,26,.85);border-radius:999px;color:#cdd6df;font-size:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;border:none;border-radius:14px;padding:12px 18px;
+  font-weight:900;cursor:pointer;background:linear-gradient(180deg,var(--brand),var(--brand2));color:#111;
+  box-shadow:0 10px 30px rgba(255,106,0,.35);transition:transform .12s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.secondary{background:#191d22;color:#e9eff5;border:1px solid var(--line);box-shadow:none}
+
+header{position:sticky;top:0;z-index:100;background:rgba(11,12,14,.85);
+  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900}
+.logo img{width:28px;height:28px;border-radius:8px}
+nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+nav a{color:#d9e2ea;padding:10px 14px;border-radius:12px;font-weight:700}
+nav a:hover,nav a.active{background:#16191d;box-shadow:inset 0 0 0 1px var(--line);color:var(--text)}
+.menu-toggle{display:none;background:#16191d;color:#e7edf3;border:1px solid var(--line);border-radius:12px;padding:8px 10px}
+
+.hero.banner{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),
+             url('https://images.unsplash.com/photo-1542367597-8849ebf6c9a4?q=80&w=2400&auto=format&fit=crop') center/cover no-repeat;
+  padding:84px 6%;margin:24px 0 8px}
+.hero .cta{display:flex;gap:14px;margin-top:14px}
+
+.article{display:flex;gap:18px;align-items:flex-start}
+.article img{width:220px;min-width:220px;height:140px;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.caption{font-size:.95rem;color:#b4c0cb;margin-top:.5rem}
+
+form{display:grid;gap:14px}
+label{font-weight:800;font-size:.95rem}
+.input, input[type='text'],input[type='email'],select,textarea{
+  background:#0f1216;color:var(--text);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+textarea{min-height:150px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#2a3440;box-shadow:0 0 0 3px rgba(42,52,64,.35)}
+.map{width:100%;height:380px;border:0;border-radius:20px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+
+footer{margin-top:48px;border-top:1px solid var(--line);padding:28px 0;color:#9fb0c0}
+.social{display:flex;gap:12px;flex-wrap:wrap}
+.social a{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:#15191f}
+
+@media (max-width:980px){
+  .grid.cols-3{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  nav ul{display:none;position:absolute;right:4%;top:62px;flex-direction:column;background:#0f1317;
+    border:1px solid var(--line);width:92%;max-width:420px;padding:10px;border-radius:14px}
+  nav ul.show{display:flex}
+  .menu-toggle{display:inline-block}
+  .article img{width:180px;min-width:180px;height:120px}
+}
+@media (max-width:560px){
+  .grid.cols-2, .grid.cols-3{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .article{flex-direction:column}
+}
