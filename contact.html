@@ -7,23 +7,29 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <title>Kontakt • AutoPulse</title>
+   <style>
+    /* Lokalne sitnice za stranicu vijesti (ostatak je u style.css) */
+    .page-header{background:#0e1116;border-bottom:2px solid #ff6b1a}
+    .page-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;color:#ff6b1a}
+    .topnav a{color:#e9eff5;text-decoration:none;margin-left:18px;font-weight:700}
+    .topnav a:hover{color:#ff6b1a}
+  </style>
 </head>
 <body>
-<header>
-  <div class="container navbar">
-    <a class="logo" href="index.html"><img src="favicon.svg" alt="AutoPulse logo"><span>AutoPulse</span></a>
-    <button aria-label="Menu" class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
-      <ul id="nav">
-        <li><a href="index.html" class="">Početna</a></li>
-        <li><a href="news.html" class="">Vijesti</a></li>
-        <li><a href="gallery.html" class="">Galerija</a></li>
-        <li><a href="about.html" class="">O nama</a></li>
-        <li><a href="contact.html" class="active">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <div class="brand">AutoPulse</div>
+      <nav class="topnav" aria-label="Glavna navigacija">
+        <a href="index.html">Početna</a>
+        <a href="news.html" aria-current="page">Vijesti</a>
+        <a href="gallery.html">Galerija</a>
+        <a href="about.html">O nama</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 <main class="container">
 
 <section class="section">
