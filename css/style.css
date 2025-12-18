@@ -234,3 +234,20 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding:28px 0;color:#9f
   color: #5f6670;
   font-size: 0.8rem;
 }
+
+.news-controls{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin: 14px 0 8px;
+}
+.news-btn{
+  width:36px;height:36px;border-radius:12px;
+  border:1px solid var(--line);
+  background:#15191f;color:var(--text);
+  cursor:pointer;
+}
+.news-btn:hover{
+  background:var(--brand);
+  color:#111;
+}
