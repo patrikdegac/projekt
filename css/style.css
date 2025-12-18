@@ -235,19 +235,9 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding:28px 0;color:#9f
   font-size: 0.8rem;
 }
 
-.news-controls{
-  display:flex;
-  justify-content:flex-end;
-  gap:10px;
-  margin: 14px 0 8px;
+.news-card.is-active{
+  border-color: var(--brand);
+  box-shadow: 0 0 0 1px rgba(255,106,0,.35), 0 12px 32px rgba(0,0,0,.45);
+  transform: translateY(-2px);
 }
-.news-btn{
-  width:36px;height:36px;border-radius:12px;
-  border:1px solid var(--line);
-  background:#15191f;color:var(--text);
-  cursor:pointer;
-}
-.news-btn:hover{
-  background:var(--brand);
-  color:#111;
-}
+
