@@ -15,17 +15,19 @@ async function handleSubmit(e){
   return false;
 }
 
-(function(){
-  const cards = document.querySelectorAll('.news-card');
-  if(cards.length !== 3) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.news-grid .news-card');
+  if (cards.length < 2) return; // ako nema bar 2, nema rotacije
 
   let i = 0;
+
   function tick(){
     cards.forEach(c => c.classList.remove('is-active'));
     cards[i].classList.add('is-active');
     i = (i + 1) % cards.length;
   }
 
-  tick();
-  setInterval(tick, 3500);
-})();
+  tick();                 // odmah aktiviraj prvu
+  setInterval(tick, 3500); // rotacija
+});
+
