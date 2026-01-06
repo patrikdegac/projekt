@@ -257,3 +257,12 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding:28px 0;color:#9f
   -webkit-line-clamp: unset; /* makni clamp */
   overflow: visible;
 }
+/* News grid: nemoj stretchati kartice na visinu najviše */
+.news-grid{
+  align-items: start;          /* ključno */
+}
+
+/* sigurni fallback da se svaka kartica drži svog sadržaja */
+.news-card{
+  align-self: start;           /* ključno */
+}
