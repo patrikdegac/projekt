@@ -237,45 +237,23 @@ footer{margin-top:48px;border-top:1px solid var(--line);padding:28px 0;color:#9f
 
 /* ===== NEWS CARD EXPAND EFFECT ===== */
 
-.news-card {
-  position: relative;
-  transition: transform .25s ease, box-shadow .25s ease;
-  cursor: pointer;
-}
-
-/* lagani hover */
-.news-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0,0,0,.45);
-}
-
-/* opis – skraćen po defaultu */
-.news-card p {
-  max-height: 3.6em;              /* ~2 reda */
+/* 2 linije teksta dok nije aktivna */
+.news-card .body p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;   /* 2 linije */
   overflow: hidden;
-  transition: max-height .35s ease;
+  transition: all .35s ease;
 }
 
-/* kad je aktivna → pokaži cijeli tekst */
-.news-card.active p,
-.news-card:hover p {
-  max-height: 300px;
+/* Aktivna kartica: obrub + više teksta */
+.news-card.is-active{
+  outline: 2px solid var(--brand);
+  box-shadow: 0 0 0 1px rgba(255,106,0,.25), 0 14px 40px rgba(0,0,0,.45);
+  transform: translateY(-2px);
 }
 
-/* mali fade efekt dolje */
-.news-card p::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1.6em;
-  background: linear-gradient(to bottom, transparent, #111316);
+.news-card.is-active .body p{
+  -webkit-line-clamp: unset; /* makni clamp */
+  overflow: visible;
 }
-
-/* makni fade kad je aktivna */
-.news-card.active p::after,
-.news-card:hover p::after {
-  display: none;
-}
-
