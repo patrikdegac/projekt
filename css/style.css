@@ -50,8 +50,32 @@ nav a:hover,nav a.active{background:#16191d;box-shadow:inset 0 0 0 1px var(--lin
 
 .article{display:flex;gap:18px;align-items:flex-start}
 .article img{width:220px;min-width:220px;height:140px;object-fit:cover}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.caption{font-size:.95rem;color:#b4c0cb;margin-top:.5rem}
+/* GALERIJA - uredno 2 reda x 3 slike (desktop) */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+}
+
+.gallery > div{
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px;
+}
+
+.gallery img{
+  width:100%;
+  height:220px;      /* SVE slike iste visine */
+  object-fit:cover;  /* crop da izgleda uredno */
+  border-radius:16px;
+}
+
+.caption{
+  font-size:.95rem;
+  color:#b4c0cb;
+  margin-top:.6rem;
+}
 
 form{display:grid;gap:14px}
 label{font-weight:800;font-size:.95rem}
