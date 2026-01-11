@@ -91,7 +91,7 @@ textarea{min-height:150px;resize:vertical}
 input:focus,select:focus,textarea:focus{outline:none;border-color:#2a3440;box-shadow:0 0 0 3px rgba(42,52,64,.35)}
 .map{width:100%;height:380px;border:0;border-radius:20px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
 
-footer{margin-top:48px;border-top:1px solid var(--line);padding:28px 0;color:#9fb0c0}
+footer{margin-top:auto;border-top:1px solid var(--line);padding:28px 0;color:#9fb0c0}
 .social{display:flex;gap:12px;flex-wrap:wrap}
 .social a{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:#15191f}
 
