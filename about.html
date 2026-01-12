@@ -28,6 +28,10 @@
         <a href="about.html">O nama</a>
         <a href="contact.html">Kontakt</a>
       </nav>
+      <!-- HAMBURGER -->
+    <button class="menu-toggle" aria-label="Otvori izbornik">
+      ☰
+    </button>
     </div>
   </header>
 <main class="container">
@@ -100,5 +104,21 @@
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.topnav ul');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+      });
+// zatvori meni kad klikneš link
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('show');
+        });
+      });
+    }
+    </script>
+
 </body>
 </html>
