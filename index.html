@@ -15,6 +15,7 @@
       color: #e9eff5;
       line-height: 1.6;
     }
+ <button class="menu-toggle" aria-label="Otvori izbornik">☰</button>
 
     /* HEADER */
     header {
@@ -256,6 +257,15 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.topnav ul');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+      });
+    }
   </script>
 </body>
 </html>
