@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('aria-expanded', 'false');
       });
     });
-
+     
     // Klik izvan menija -> zatvori
     document.addEventListener('click', () => {
       menu.classList.remove('show');
