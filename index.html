@@ -16,7 +16,6 @@
       line-height: 1.6;
     }
     /* HEADER */
-    /* Lokalne sitnice za stranicu vijesti (ostatak je u style.css) */
     .page-header{background:#0e1116;border-bottom:2px solid #ff6b1a}
     .page-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{font-weight:800;color:#ff6b1a}
@@ -151,18 +150,20 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>AutoPulse</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Početna</a></li>
-        <li><a href="news.html">Vijesti</a></li>
-        <li><a href="gallery.html">Galerija</a></li>
-        <li><a href="about.html">O nama</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-      </ul>
-    </nav>
-
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <div class="brand">AutoPulse</div>
+      <nav class="topnav" aria-label="Glavna navigacija">
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="news.html">Vijesti</a></li>
+          <li><a href="gallery.html">Galerija</a></li>
+          <li><a href="about.html">O nama</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
