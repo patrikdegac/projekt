@@ -313,10 +313,9 @@ footer{margin-top:auto;border-top:1px solid var(--line);padding:28px 0;color:#9f
 }
 @media (max-width:980px){
 
-  /* da dropdown bude vezan uz header */
-  .navbar{ position:relative; }
+  /* dropdown vezan uz header container koji stvarno postoji */
+  .page-header .container{ position:relative; }
 
-  /* sakrij meni dok nije otvoren */
   .topnav ul{
     display:none;
     list-style:none;
@@ -338,11 +337,10 @@ footer{margin-top:auto;border-top:1px solid var(--line);padding:28px 0;color:#9f
     z-index:9999;
   }
 
-  .topnav ul.show{ display:block; }
+  .topnav ul.show{ display:flex; flex-direction:column; }
 
   .topnav li{ margin:0; padding:0; }
 
-  /* stavke jedna ispod druge + narančasti hover */
   .topnav a{
     display:block;
     padding:14px 14px;
@@ -353,7 +351,7 @@ footer{margin-top:auto;border-top:1px solid var(--line);padding:28px 0;color:#9f
     background:#12161b;
     border:1px solid var(--line);
     margin:8px 0;
-    transition: .2s ease;
+    transition:.2s ease;
   }
 
   .topnav a:hover{
@@ -362,18 +360,15 @@ footer{margin-top:auto;border-top:1px solid var(--line);padding:28px 0;color:#9f
     color:#fff;
   }
 
-  /* hamburger desno, narančast */
   .menu-toggle{
     display:inline-flex;
     align-items:center;
     justify-content:center;
     width:44px;
     height:44px;
-
     background:transparent;
     border:1px solid rgba(255,106,0,.35);
     border-radius:12px;
-
     color:var(--brand);
     font-size:22px;
     cursor:pointer;
