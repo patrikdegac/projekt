@@ -22,7 +22,7 @@
     <div class="container">
       <div class="brand">AutoPulse</div>
       <nav class="topnav" aria-label="Glavna navigacija">
-        <ul id="mobileMenu">>
+        <ul id="mobileMenu">
           <li><a href="index.html">Početna</a></li>
           <li><a href="news.html">Vijesti</a></li>
           <li><a href="gallery.html">Galerija</a></li>
@@ -108,34 +108,5 @@
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.topnav ul');
-
-    if (toggle && menu) {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menu.classList.toggle('show');
-        toggle.setAttribute('aria-expanded', menu.classList.contains('show') ? 'true' : 'false');
-        });
-
-    // zatvori kad klikneš link
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menu.classList.remove('show');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // zatvori klikom izvan menija
-    document.addEventListener('click', () => {
-      menu.classList.remove('show');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-      menu.addEventListener('click', (e) => e.stopPropagation());
-    }
-  </script>
-
-
 </body>
 </html>
