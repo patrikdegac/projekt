@@ -150,12 +150,12 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+ <!-- Header -->
   <header class="page-header">
     <div class="container">
       <div class="brand">AutoPulse</div>
       <nav class="topnav" aria-label="Glavna navigacija">
-        <ul>
+        <ul id="mobileMenu">
           <li><a href="index.html">Početna</a></li>
           <li><a href="news.html">Vijesti</a></li>
           <li><a href="gallery.html">Galerija</a></li>
@@ -163,9 +163,12 @@
           <li><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
+      <!-- HAMBURGER -->
+    <button class="menu-toggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Otvori izbornik">
+      ☰
+    </button>
     </div>
   </header>
-
   <section class="hero">
     <h2>Brz, čist i moderan auto portal.</h2>
     <p>AutoPulse donosi svježe vijesti, usporedbe i vodiče iz svijeta automobila – za sve istinske entuzijaste motora.</p>
@@ -201,11 +204,11 @@
 
       <nav aria-label="Footer navigation" class="footer-nav">
         <ul>
-          <a href="index.html">Početna</a>
-          <a href="news.html">Vijesti</a>
-          <a href="gallery.html">Galerija</a>
-          <a href="about.html">O nama</a>
-          <a href="contact.html">Kontakt</a>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="news.html">Vijesti</a></li>
+          <li><a href="gallery.html">Galerija</a></li>
+          <li><a href="about.html">O nama</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
 
@@ -241,14 +244,6 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.topnav ul');
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('show');
-      });
-    }
-  </script>
+<script src="js/main.js"></script>
 </body>
 </html>
