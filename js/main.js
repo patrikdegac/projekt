@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Spriječi da klik unutar menija zatvori meni
     menu.addEventListener('click', (e) => e.stopPropagation());
   }
-
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.news-grid .news-card');
