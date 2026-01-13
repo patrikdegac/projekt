@@ -18,28 +18,13 @@
  <button class="menu-toggle" aria-label="Otvori izbornik">☰</button>
 
     /* HEADER */
-    header {
-      background: #0e1116;
-      border-bottom: 2px solid #ff6b1a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      font-size: 1.3rem;
-      color: #ff6b1a;
-      font-weight: 700;
-    }
-    nav a {
-      color: #e9eff5;
-      text-decoration: none;
-      margin-left: 1.5rem;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #ff6b1a;
-    }
+    <style>
+    /* Lokalne sitnice za stranicu vijesti (ostatak je u style.css) */
+    .page-header{background:#0e1116;border-bottom:2px solid #ff6b1a}
+    .page-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;color:#ff6b1a}
+    .topnav a{color:#e9eff5;text-decoration:none;margin-left:18px;font-weight:700}
+    .topnav a:hover{color:#ff6b1a}
 
     /* HERO */
     .hero {
