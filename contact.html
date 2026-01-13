@@ -17,17 +17,23 @@
   </style>
 </head>
 <body>
-<!-- Header -->
+ <!-- Header -->
   <header class="page-header">
     <div class="container">
       <div class="brand">AutoPulse</div>
       <nav class="topnav" aria-label="Glavna navigacija">
-        <a href="index.html">Početna</a>
-        <a href="news.html" aria-current="page">Vijesti</a>
-        <a href="gallery.html">Galerija</a>
-        <a href="about.html">O nama</a>
-        <a href="contact.html">Kontakt</a>
+        <ul id="mobileMenu">
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="news.html">Vijesti</a></li>
+          <li><a href="gallery.html">Galerija</a></li>
+          <li><a href="about.html">O nama</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
       </nav>
+      <!-- HAMBURGER -->
+    <button class="menu-toggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Otvori izbornik">
+      ☰
+    </button>
     </div>
   </header>
 <main class="container">
@@ -67,12 +73,14 @@
         <p>Vijesti, recenzije i vodiči za ljubitelje automobila.</p>
       </div>
 
-      <nav aria-label="Footer navigation" class="footer-nav">
-        <a href="index.html">Početna</a>
-        <a href="news.html">Vijesti</a>
-        <a href="gallery.html">Galerija</a>
-        <a href="about.html">O nama</a>
-        <a href="contact.html">Kontakt</a>
+       <nav aria-label="Footer navigation" class="footer-nav">
+         <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="news.html">Vijesti</a></li>
+          <li><a href="gallery.html">Galerija</a></li>
+          <li><a href="about.html">O nama</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
       </nav>
 
       <div class="footer-social">
