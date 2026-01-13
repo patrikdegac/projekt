@@ -30,12 +30,12 @@
 </head>
 <body>
 
-  <!-- Header -->
+ <!-- Header -->
   <header class="page-header">
     <div class="container">
       <div class="brand">AutoPulse</div>
       <nav class="topnav" aria-label="Glavna navigacija">
-        <ul>
+        <ul id="mobileMenu">
           <li><a href="index.html">Početna</a></li>
           <li><a href="news.html">Vijesti</a></li>
           <li><a href="gallery.html">Galerija</a></li>
@@ -43,6 +43,10 @@
           <li><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
+      <!-- HAMBURGER -->
+    <button class="menu-toggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Otvori izbornik">
+      ☰
+    </button>
     </div>
   </header>
 
@@ -143,8 +147,7 @@
       <small>© <span id="y"></span> AutoPulse • Sva prava pridržana</small>
     </div>
   </footer>
-
-  <!-- Ako ti je skripta u /js/, promijeni na: js/main.js -->
+  
   <script src="js/main.js"></script>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
