@@ -375,3 +375,13 @@ footer{margin-top:auto;border-top:1px solid var(--line);padding:28px 0;color:#9f
     cursor:pointer;
   }
 }
+/* ===== FORCE MOBILE MENU HIDE (zadnje u CSS-u) ===== */
+@media (max-width:980px){
+  header.page-header nav.topnav > ul#mobileMenu{
+    display:none !important;
+  }
+  header.page-header nav.topnav > ul#mobileMenu.show{
+    display:flex !important;
+    flex-direction:column !important;
+  }
+}
